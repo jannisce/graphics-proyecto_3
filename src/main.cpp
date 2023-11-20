@@ -106,45 +106,10 @@ Color computeShading(const glm::vec3& orig, const glm::vec3& dir, const Intersec
     return (1 - mat.reflectivity - mat.transparency) * (diffuse + specular) + reflected + refracted;
 }
 
-
 void pixel(glm::vec2 position, Color color) {
     SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
     SDL_RenderDrawPoint(renderer, position.x, position.y);
 }
-
-// void render(std::vector<Object*>& objects) {
-//     // This is the "simulated" up vector
-//     glm::vec3 simulatedUp = glm::vec3(0, 1, 0);
-
-//     for (int y = 0; y < SCREEN_HEIGHT; ++y) {
-//         for (int x = 0; x < SCREEN_WIDTH; ++x) {
-//             // float random_value = static_cast<float>(std::rand()) / static_cast<float>(RAND_MAX);
-//             // if (random_value > 0.8) {
-//             // Map the pixel coordinate to screen space [-1, 1]
-//             float screenX =  (2.0f * x) / SCREEN_WIDTH - 1.0f;
-//             float screenY = -(2.0f * y) / SCREEN_HEIGHT + 1.0f;
-
-//             // Adjust for aspect ratio
-//             screenX *= ASPECT_RATIO;
-
-//             // Compute the direction of the ray for this pixel
-//             glm::vec3 dir = glm::normalize(camera.target - camera.position);
-
-//             // Compute the real right and up vectors
-//             glm::vec3 right = glm::normalize(glm::cross(dir, simulatedUp));
-//             glm::vec3 up = glm::cross(right, dir);
-
-//             dir = dir + right * screenX + up * screenY;
-
-//             // Then cast the ray
-//             Color pixelColor = castRay(camera.position, glm::normalize(dir), objects);
-
-//             // Draw the pixel on screen with the returned color
-//             pixel(glm::vec2(x, y), pixelColor);
-//             // }
-//         }
-//     }
-// }
 
 void render(std::vector<Object*>& objects) {
     // Camera orientation vectors
@@ -171,7 +136,6 @@ void render(std::vector<Object*>& objects) {
         }
     }
 }
-
 
 int main(int argc, char* args[]) {
     SDL_Init(SDL_INIT_VIDEO);
