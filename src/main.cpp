@@ -21,7 +21,7 @@
 
 SDL_Renderer* renderer = nullptr;
 Light light(glm::vec3(0.0f, 14.0f, -60.0f), 1.5f, Color(255, 255, 255));
-Camera camera(glm::vec3(-17.0f, 14.0f, -20.0f), glm::vec3(0.0f, 0.0f, 0.0f), 10.0f);
+Camera camera(glm::vec3(-2.0f, 14.0f, -30.0f), glm::vec3(0.0f, 0.0f, 0.0f), 10.0f);
 Skybox skybox("./textures/skybox.jpg");
 
 float castShadow(const glm::vec3& shadowOrig, const glm::vec3& lightDir, 

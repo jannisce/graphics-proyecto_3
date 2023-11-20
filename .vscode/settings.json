@@ -4,6 +4,8 @@
     "__split_buffer": "cpp",
     "string": "cpp",
     "vector": "cpp",
-    "algorithm": "cpp"
+    "algorithm": "cpp",
+    "__bit_reference": "cpp",
+    "ios": "cpp"
   }
 }
