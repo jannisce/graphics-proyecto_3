@@ -106,6 +106,7 @@ Color computeShading(const glm::vec3& orig, const glm::vec3& dir, const Intersec
     return (1 - mat.reflectivity - mat.transparency) * (diffuse + specular) + reflected + refracted;
 }
 
+
 void pixel(glm::vec2 position, Color color) {
     SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
     SDL_RenderDrawPoint(renderer, position.x, position.y);
