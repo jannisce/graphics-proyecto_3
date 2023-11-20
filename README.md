@@ -36,7 +36,7 @@ Que los estudiantes pongan en práctica todos los conocimientos adquiridos sobre
 
 ### Escena de atras
 
-![img2](readme-media/scene2.png)
+![img22](readme-media/scene22.png)
 
 ## Usando otro skybox
 
